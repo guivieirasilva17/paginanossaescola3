@@ -21,12 +21,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-.cabecalho-imagem{
-
-width: 10%;
-display: center;
-justify-content: flex-start;
-align-items: center;
+.cabecalho-imagem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .titulo_site{
 .titulo_site{
