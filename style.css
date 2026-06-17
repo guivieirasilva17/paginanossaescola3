@@ -85,9 +85,9 @@ width: 120px;
 width: 38px;
 padding: 4px 8px;
 }
-.estudante{
-background-image: background-color(#0c31d8);
-padding: 24px 0;
+.estudante {
+    background-color: #00aef3;
+    padding: 24px 0;
 }
 
 .estudante.div{
