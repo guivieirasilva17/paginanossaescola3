@@ -78,7 +78,7 @@ justify-content: space-around;
 }
 .bleach{
 background-image: linear-gradient(#2873a5, #0c8be0);
-color: white;
+color: rgb(255, 255, 255);
 display: flex;
 flex-direction: column;
 align-items: center;
