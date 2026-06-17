@@ -66,10 +66,19 @@ padding: 20px;
     transform: scale(1.1);
 }
 
-.banner1{
-display: flex;
-justify-content: center;
+.banner1 {
+    display: flex;
+    justify-content: center;
+    width: 100vw; /* Força o container a ter a largura exata da tela visível */
+    overflow: hidden; /* Evita que crie barra de rolagem horizontal se a imagem passar um pouco */
 }
+
+.banner-imagem {
+    width: 100%; /* Obriga a imagem a esticar até as bordas da tela */
+    height: auto; /* Mantém a proporção correta para a imagem não ficar achatada ou distorcida */
+    display: block;
+}
+
 .estudante_titulo{
 padding: 50px;
 text-align: center;
