@@ -6,42 +6,64 @@ box-sizing: border-box;
 body{
 font-family: "Poppins", sans-serif;
 }
-header{
+
 header{
 background-image: linear-gradient(135deg, #0c8be0, #2873a5);
 color: rgb(0, 17, 255);
 width: 100%;
 padding: 20px;
 }
-}
+
+@import url('https://googleapis.com');
+
 .cabecalho-itens {
     max-width: 1980px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribui os três blocos pelas pontas e centro */
+    justify-content: space-between;
+    padding: 15px 30px;
+    
+    /* Fundo vermelho com azul sobreposto (Gradiente) */
+    background: linear-gradient(135deg, #ff0000 0%, #0000ff 100%); 
+}
+
+.cabecalho-bloco-imagem {
+    width: 33.33%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .cabecalho-imagem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 33.33%; /* Ocupa exatamente um terço da tela esquerda/centro */
+    max-height: 80px; /* Ajuste o tamanho da sua foto aqui */
+    border-radius: 50%; /* Opcional: deixa a foto redonda */
 }
 
 .titulo-site {
-    padding: 50px;
+    width: 33.33%;
     text-align: center;
-    width: 33.33%; /* Ocupa exatamente o terço central da tela */
-    font-size: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 45px;
+    color: #ffffff; /* Cor branca para dar contraste no fundo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+    /* Fonte Cursiva */
+    font-family: 'Caveat', cursive; 
 }
 
 .sociais {
+    width: 33.33%;
     display: flex;
     justify-content: flex-end;
-    width: 33.33%; /* Ocupa exatamente o terço direito da tela */
-    padding-right: 30px;
+}
+
+.instagram-logo {
+    max-height: 40px; /* Ajuste o tamanho do ícone aqui */
+    transition: transform 0.2s;
+}
+
+/* Efeito visual ao passar o mouse no link */
+.instagram-logo:hover {
+    transform: scale(1.1);
 }
 
 .banner1{
