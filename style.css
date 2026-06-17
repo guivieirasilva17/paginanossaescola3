@@ -66,10 +66,22 @@ padding: 20px;
     transform: scale(1.1);
 }
 
-.banner1{
-display: flex;
-justify-content: center;
+.banner1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    /* Degradê Bleach: Preto nas pontas, Laranja no centro */
+    background: linear-gradient(90deg, #111111 0%, #f6a652 50%, #111111 100%); 
 }
+
+.banner-imagem {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .estudante_titulo{
 padding: 50px;
 text-align: center;
