@@ -66,22 +66,10 @@ padding: 20px;
     transform: scale(1.1);
 }
 
-.banner1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    
-    /* Degradê Bleach: Preto nas pontas, Laranja no centro */
-    background: linear-gradient(90deg, #111111 0%, #f6a652 50%, #111111 100%); 
+.banner1{
+display: flex;
+justify-content: center;
 }
-
-.banner-imagem {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
 .estudante_titulo{
 padding: 50px;
 text-align: center;
@@ -98,7 +86,7 @@ width: 38px;
 padding: 4px 8px;
 }
 .estudante {
-    background-color: #00aef3;
+    background-color: #69e6db;
     padding: 24px 0;
 }
 
@@ -123,14 +111,49 @@ text-align: center;
 padding: 20px;
 text-align: center;
 }
-.logo_rodape{
-height: 80px;
-padding: 12px 0;
-display: block;
-margin: 0 auto;
+/* Importação de fonte estilo pincel/cursiva japonesa de anime */
+@import url('https://googleapis.com');
+
+.bleach {
+    background-color: #0a0a0a; /* Preto profundo do manto dos Shinigamis */
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 4px solid #ee1d23; /* Linha superior vermelha da logo de Bleach */
 }
 
-.link{
-color: #ffffff;
-text-decoration: none;
+.logo_rodape {
+    height: 90px;
+    padding: 10px 0;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0px 0px 8px rgba(238, 29, 35, 0.6)); /* Brilho vermelho na imagem */
+}
+
+.escola-titulo {
+    font-family: 'Permanent Marker', cursive; /* Aplica a letra cursiva estilizada */
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.link {
+    color: #f6a652; /* Laranja vibrante do cabelo do Ichigo */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    margin-left: 10px;
+}
+
+/* Efeito luminoso (Reiatsu) ao passar o mouse no link */
+.link:hover {
+    color: #ee1d23; /* Muda para o vermelho clássico */
+    text-shadow: 0px 0px 10px #ee1d23;
+}
+
+.copyright {
+    color: #888888;
+    font-size: 13px;
+    margin-top: 15px;
+    font-family: sans-serif; /* Mantém o texto miúdo legível */
 }
