@@ -249,36 +249,30 @@ padding: 20px;
     transition: transform 0.3s ease;
 }
 
-/* Efeito de super transformação ao passar o mouse (Hover) */
-.link:hover {
-    color: #ffffff;
-    background-color: #ee1d23; /* Fundo assume o vermelho do Getsuga Tensho */
-    border-color: #ee1d23;
-    box-shadow: 0 0 20px #ee1d23, 0 0 40px #ee1d23;
-    transform: scale(1.08) translateY(-3px);
+/* Estilização principal do Rodapé com efeito incandescente Azul Ciano */
+.bleach {
+    background: linear-gradient(180deg, #16161a 0%, #0d0d11 100%);
+    padding: 60px 20px 30px 20px;
+    text-align: center;
+    border-top: 2px solid #00ffff; /* Linha superior agora é Azul Ciano */
+    position: relative;
+    
+    /* Aplica a animação de chama incandescente ao redor do rodapé */
+    animation: chama-azul-incandescente 2.5s infinite alternate ease-in-out;
 }
 
-.link:hover .raio-icone {
-    transform: rotate(20deg) scale(1.2);
-}
-
-/* Texto do Copyright ajustado para ser totalmente visível no fundo escuro */
-.copyright {
-    color: #52525b; /* Cinza médio legível */
-    font-size: 13px;
-    margin-top: 45px;
-    font-family: system-ui, -apple-system, sans-serif;
-    border-top: 1px solid #27272a;
-    padding-top: 20px;
-}
-
-/* ================= ANIMAÇÃO DE ENERGIA DO LINK ================= */
-@keyframes pulsa-link-reiatsu {
+/* ================= NOVA ANIMAÇÃO DA REIATSU AZUL DO RODAPÉ ================= */
+@keyframes chama-azul-incandescente {
     0% {
-        box-shadow: 0 0 8px rgba(246, 166, 82, 0.4);
+        /* Brilho ciano vivo nas bordas e reflexo suave ao fundo */
+        box-shadow: 0 -10px 25px rgba(0, 255, 255, 0.2), 
+                    0 0 15px rgba(0, 255, 255, 0.15),
+                    inset 0 10px 20px rgba(0, 255, 255, 0.05);
     }
     100% {
-        box-shadow: 0 0 20px rgba(246, 166, 82, 0.8), inset 0 0 8px rgba(246, 166, 82, 0.2);
-        transform: scale(1.02);
+        /* Brilho expande simulando uma transformação ativa */
+        box-shadow: 0 -15px 40px rgba(0, 255, 255, 0.45), 
+                    0 0 30px rgba(0, 191, 255, 0.35),
+                    inset 0 15px 30px rgba(0, 255, 255, 0.1);
     }
 }
