@@ -79,33 +79,113 @@ padding: 20px;
     display: block;
 }
 
-.estudante_titulo{
-padding: 50px;
-text-align: center;
+.estudante_titulo {
+    padding: 50px;
+    text-align: center;
+}
 
+.estudante-nome {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
 }
-.estudante-nome{
-text-align: center;
+
+/* Força todas as imagens a terem a mesma proporção e formato circular */
+.estudante-imagem {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
 }
-.estudante-imagem{
-width: 120px;
+
+/* Efeito de zoom ao passar o mouse na foto */
+.estudante-imagem:hover {
+    transform: scale(1.1);
 }
-.estudante-icone{
-width: 38px;
-padding: 4px 8px;
+
+.estudante-icone {
+    width: 38px;
+    padding: 4px 8px;
 }
+
 .estudante {
-    background-color: #69e6db;
+    background-color: #16161a; /* Alterado para um tom escuro para destacar as auras/Reiatsu */
+    color: #ffffff;
     padding: 24px 0;
 }
 
-.estudante.div{
-text-align: center;
-padding: 24px 0;
+.estudante-div {
+    text-align: center;
+    padding: 24px 10px;
 }
-.estudantes_todos{
-display: flex;
-justify-content: space-around;
+
+.estudantes_todos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Garante que quebre a linha em telas menores */
+}
+
+/* ================= AURAS DE REIATSU ================= */
+
+/* Byakuya - Rosa/Branco (Pétalas de Cerejeira) */
+.reiatsu-byakuya {
+    box-shadow: 0 0 15px 5px rgba(255, 182, 193, 0.8);
+}
+
+/* Aizen - Roxo Escuro/Hipnótico */
+.reiatsu-aizen {
+    box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.8);
+}
+
+/* Shunsui - Rosa Choque/Sombrio */
+.reiatsu-shunsui {
+    box-shadow: 0 0 15px 5px rgba(255, 20, 147, 0.8);
+}
+
+/* Ichibei - Preto/Cinza Macabro */
+.reiatsu-ichibei {
+    box-shadow: 0 0 15px 5px rgba(70, 70, 70, 0.8);
+}
+
+/* Ichigo - Vermelho e Preto (Getsuga Tensho) */
+.reiatsu-ichigo {
+    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8);
+}
+
+/* Yhwach - Azul Escuro/Aniquilação */
+.reiatsu-yhwach {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 139, 0.8);
+}
+
+/* Senjumaru - Dourado Tecelão */
+.reiatsu-senjumaru {
+    box-shadow: 0 0 15px 5px rgba(218, 165, 32, 0.8);
+}
+
+/* Unohana - Verde Água/Cura (Sombria) */
+.reiatsu-unohana {
+    box-shadow: 0 0 15px 5px rgba(0, 128, 128, 0.8);
+}
+
+/* Soi Fon - Amarelo Abelha/Relâmpago */
+.reiatsu-soifon {
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.8);
+}
+
+/* Yachiru - Rosa Bebê */
+.reiatsu-yachiru {
+    box-shadow: 0 0 15px 5px rgba(255, 105, 180, 0.8);
+}
+
+/* Yoruichi - Relâmpago Roxo/Ciano */
+.reiatsu-yoruichi {
+    box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.8);
+}
+
+/* Rangiku - Laranja Claro (Cinzas) */
+.reiatsu-rangiku {
+    box-shadow: 0 0 15px 5px rgba(255, 140, 0, 0.8);
 }
 .bleach{
 background-image: linear-gradient(#2873a5, #0c8be0);
