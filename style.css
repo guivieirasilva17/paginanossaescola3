@@ -196,22 +196,89 @@ padding: 20px;
 }
 
 
+./* Estilização principal do Rodapé com efeito de névoa espiritual */
+.bleach {
+    background: linear-gradient(180deg, #16161a 0%, #0d0d11 100%);
+    padding: 60px 20px 30px 20px;
+    text-align: center;
+    border-top: 2px solid #ee1d23; /* Linha de energia vermelha dividindo as seções */
+    box-shadow: 0 -10px 30px rgba(238, 29, 35, 0.15); /* Brilho sutil subindo da borda */
+}
+
+.footer-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Título principal estilizado e imponente */
+.escola-titulo {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Texto de apoio intermediário */
+.subtitulo-gotei {
+    color: #a0a0aa;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* Link com efeito de transformação e Brilho Ativo (Neon Dinâmico) */
 .link {
-    color: #f6a652; /* Laranja vibrante do cabelo do Ichigo */
+    display: inline-block;
+    color: #f6a652; /* Laranja clássico do Ichigo */
     text-decoration: none;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: 2px solid #f6a652;
+    border-radius: 50px;
+    background-color: rgba(246, 166, 82, 0.05);
+    transition: all 0.4s ease;
+    /* Animação contínua que faz o link pulsar energia espiritual */
+    animation: pulsa-link-reiatsu 1.5s infinite alternate ease-in-out;
 }
 
-/* Efeito luminoso (Reiatsu) ao passar o mouse no link */
+.raio-icone {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de super transformação ao passar o mouse (Hover) */
 .link:hover {
-    color: #ee1d23; /* Muda para o vermelho clássico */
-    text-shadow: 0px 0px 10px #ee1d23;
+    color: #ffffff;
+    background-color: #ee1d23; /* Fundo assume o vermelho do Getsuga Tensho */
+    border-color: #ee1d23;
+    box-shadow: 0 0 20px #ee1d23, 0 0 40px #ee1d23;
+    transform: scale(1.08) translateY(-3px);
 }
 
+.link:hover .raio-icone {
+    transform: rotate(20deg) scale(1.2);
+}
+
+/* Texto do Copyright ajustado para ser totalmente visível no fundo escuro */
 .copyright {
-    color: #180303;
+    color: #52525b; /* Cinza médio legível */
     font-size: 13px;
-    margin-top: 15px;
-    font-family: sans-serif; /* Mantém o texto miúdo legível */
+    margin-top: 45px;
+    font-family: system-ui, -apple-system, sans-serif;
+    border-top: 1px solid #27272a;
+    padding-top: 20px;
+}
+
+/* ================= ANIMAÇÃO DE ENERGIA DO LINK ================= */
+@keyframes pulsa-link-reiatsu {
+    0% {
+        box-shadow: 0 0 8px rgba(246, 166, 82, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(246, 166, 82, 0.8), inset 0 0 8px rgba(246, 166, 82, 0.2);
+        transform: scale(1.02);
+    }
 }
