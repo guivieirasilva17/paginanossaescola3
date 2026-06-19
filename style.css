@@ -196,13 +196,15 @@ padding: 20px;
 }
 
 
-./* Estilização principal do Rodapé com efeito de névoa espiritual */
+./* Estilização principal do Rodapé com fundo Ciano Claro e Aura Azul Escura */
 .bleach {
-    background: linear-gradient(180deg, #16161a 0%, #0d0d11 100%);
+    background: #00ffff; /* Fundo Azul Claro Ciano sólido e vibrante */
     padding: 60px 20px 30px 20px;
     text-align: center;
-    border-top: 2px solid #ee1d23; /* Linha de energia vermelha dividindo as seções */
-    box-shadow: 0 -10px 30px rgba(238, 29, 35, 0.15); /* Brilho sutil subindo da borda */
+    border-top: 4px solid #00008b; /* Borda superior em Azul Escuro */
+    
+    /* Aplica a animação de aura em azul escuro ao redor de todo o rodapé */
+    animation: aura-azul-escuro 2s infinite alternate ease-in-out;
 }
 
 .footer-conteudo {
@@ -210,38 +212,36 @@ padding: 20px;
     margin: 0 auto;
 }
 
-/* Título principal estilizado e imponente */
+/* Ajuste de cor para leitura sobre o fundo ciano claro */
 .escola-titulo {
     font-family: 'Impact', 'Arial Black', sans-serif;
     font-size: 32px;
     letter-spacing: 2px;
-    color: #ffffff;
+    color: #000050; /* Azul escuro profundo para contraste */
     text-transform: uppercase;
     margin-bottom: 5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Texto de apoio intermediário */
+/* Ajuste de cor do subtítulo */
 .subtitulo-gotei {
-    color: #a0a0aa;
+    color: #004080; /* Azul médio escuro */
     font-size: 16px;
     margin-bottom: 25px;
+    font-weight: bold;
 }
 
-/* Link com efeito de transformação e Brilho Ativo (Neon Dinâmico) */
+/* Link ajustado com bordas escuras */
 .link {
     display: inline-block;
-    color: #f6a652; /* Laranja clássico do Ichigo */
+    color: #00008b; /* Texto em azul escuro */
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
     padding: 12px 30px;
-    border: 2px solid #f6a652;
+    border: 2px solid #00008b;
     border-radius: 50px;
-    background-color: rgba(246, 166, 82, 0.05);
+    background-color: rgba(0, 0, 139, 0.1);
     transition: all 0.4s ease;
-    /* Animação contínua que faz o link pulsar energia espiritual */
-    animation: pulsa-link-reiatsu 1.5s infinite alternate ease-in-out;
 }
 
 .raio-icone {
@@ -249,30 +249,38 @@ padding: 20px;
     transition: transform 0.3s ease;
 }
 
-/* Estilização principal do Rodapé com efeito incandescente Azul Ciano */
-.bleach {
-    background: linear-gradient(180deg, #16161a 0%, #0d0d11 100%);
-    padding: 60px 20px 30px 20px;
-    text-align: center;
-    border-top: 2px solid #00ffff; /* Linha superior agora é Azul Ciano */
-    position: relative;
-    
-    /* Aplica a animação de chama incandescente ao redor do rodapé */
-    animation: chama-azul-incandescente 2.5s infinite alternate ease-in-out;
+/* Efeito ao passar o mouse no botão */
+.link:hover {
+    color: #ffffff;
+    background-color: #00008b;
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 139, 0.4);
 }
 
-/* ================= NOVA ANIMAÇÃO DA REIATSU AZUL DO RODAPÉ ================= */
-@keyframes chama-azul-incandescente {
+.link:hover .raio-icone {
+    transform: rotate(20deg) scale(1.2);
+}
+
+/* Texto do Copyright ajustado para o novo fundo */
+.copyright {
+    color: #005580;
+    font-size: 13px;
+    margin-top: 45px;
+    font-family: system-ui, -apple-system, sans-serif;
+    border-top: 1px solid rgba(0, 0, 139, 0.2);
+    padding-top: 20px;
+}
+
+/* ================= ANIMAÇÃO DA AURA AZUL ESCURO CONTÍNUA ================= */
+@keyframes aura-azul-escuro {
     0% {
-        /* Brilho ciano vivo nas bordas e reflexo suave ao fundo */
-        box-shadow: 0 -10px 25px rgba(0, 255, 255, 0.2), 
-                    0 0 15px rgba(0, 255, 255, 0.15),
-                    inset 0 10px 20px rgba(0, 255, 255, 0.05);
+        /* Sombra forte em tom azul marinho/escuro */
+        box-shadow: 0 -10px 20px rgba(0, 0, 139, 0.6), 
+                    0 10px 20px rgba(0, 0, 139, 0.4);
     }
     100% {
-        /* Brilho expande simulando uma transformação ativa */
-        box-shadow: 0 -15px 40px rgba(0, 255, 255, 0.45), 
-                    0 0 30px rgba(0, 191, 255, 0.35),
-                    inset 0 15px 30px rgba(0, 255, 255, 0.1);
+        /* Expansão do poder azul escuro */
+        box-shadow: 0 -15px 35px rgba(0, 0, 255, 0.8), 
+                    0 15px 35px rgba(0, 0, 255, 0.5);
     }
 }
