@@ -80,152 +80,81 @@ padding: 20px;
 }
 
 .estudante_titulo {
-    padding: 50px;
+    padding: 50px 20px;
     text-align: center;
-}
-
-.estudante-nome {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-/* Força todas as imagens a terem a mesma proporção e formato circular */
-.estudante-imagem {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
-}
-
-/* Efeito de zoom ao passar o mouse na foto */
-.estudante-imagem:hover {
-    transform: scale(1.1);
-}
-
-.estudante-icone {
-    width: 38px;
-    padding: 4px 8px;
+    font-size: 28px;
 }
 
 .estudante {
-    background-color: #16161a; /* Alterado para um tom escuro para destacar as auras/Reiatsu */
+    background-color: #16161a;
     color: #ffffff;
-    padding: 24px 0;
-}
-
-.estudante-div {
-    text-align: center;
-    padding: 24px 10px;
+    padding: 40px 0;
 }
 
 .estudantes_todos {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Garante que quebre a linha em telas menores */
-}
-
-/* ================= AURAS DE REIATSU ================= */
-
-/* Byakuya - Rosa/Branco (Pétalas de Cerejeira) */
-.reiatsu-byakuya {
-    box-shadow: 0 0 15px 5px rgba(255, 182, 193, 0.8);
-}
-
-/* Aizen - Roxo Escuro/Hipnótico */
-.reiatsu-aizen {
-    box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.8);
-}
-
-/* Shunsui - Rosa Choque/Sombrio */
-.reiatsu-shunsui {
-    box-shadow: 0 0 15px 5px rgba(255, 20, 147, 0.8);
-}
-
-/* Ichibei - Preto/Cinza Macabro */
-.reiatsu-ichibei {
-    box-shadow: 0 0 15px 5px rgba(70, 70, 70, 0.8);
-}
-
-/* Ichigo - Vermelho e Preto (Getsuga Tensho) */
-.reiatsu-ichigo {
-    box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8);
-}
-
-/* Yhwach - Azul Escuro/Aniquilação */
-.reiatsu-yhwach {
-    box-shadow: 0 0 15px 5px rgba(0, 0, 139, 0.8);
-}
-
-/* Senjumaru - Dourado Tecelão */
-.reiatsu-senjumaru {
-    box-shadow: 0 0 15px 5px rgba(218, 165, 32, 0.8);
-}
-
-/* Unohana - Verde Água/Cura (Sombria) */
-.reiatsu-unohana {
-    box-shadow: 0 0 15px 5px rgba(0, 128, 128, 0.8);
-}
-
-/* Soi Fon - Amarelo Abelha/Relâmpago */
-.reiatsu-soifon {
-    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.8);
-}
-
-/* Yachiru - Rosa Bebê */
-.reiatsu-yachiru {
-    box-shadow: 0 0 15px 5px rgba(255, 105, 180, 0.8);
-}
-
-/* Yoruichi - Relâmpago Roxo/Ciano */
-.reiatsu-yoruichi {
-    box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.8);
-}
-
-/* Rangiku - Laranja Claro (Cinzas) */
-.reiatsu-rangiku {
-    box-shadow: 0 0 15px 5px rgba(255, 140, 0, 0.8);
-}
-.bleach{
-background-image: linear-gradient(#2873a5, #0c8be0);
-color: rgb(255, 255, 255);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 35px 0;
-text-align: center;
-}.escola-titulo{
-padding: 20px;
-text-align: center;
-}
-/* Importação de fonte estilo pincel/cursiva japonesa de anime */
-@import url('https://googleapis.com');
-
-.bleach {
-    background-color: #0a0a0a; /* Preto profundo do manto dos Shinigamis */
-    padding: 30px 20px;
-    text-align: center;
-    border-top: 4px solid #ee1d23; /* Linha superior vermelha da logo de Bleach */
-}
-
-.logo_rodape {
-    height: 90px;
-    padding: 10px 0;
-    display: block;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Alinha os cards lado a lado e quebra a linha se faltar espaço */
+    max-width: 1200px;
     margin: 0 auto;
-    filter: drop-shadow(0px 0px 8px rgba(238, 29, 35, 0.6)); /* Brilho vermelho na imagem */
 }
 
-.escola-titulo {
-    font-family: 'Permanent Marker', cursive; /* Aplica a letra cursiva estilizada */
-    color: #ffffff;
-    font-size: 24px;
-    letter-spacing: 1px;
-    margin: 20px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+.estudante-div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px; /* Define um tamanho padrão fixo para o card de cada personagem */
 }
+
+/* Container circular que segura a imagem e recebe o efeito de iluminação da aura */
+.imagem-container {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden; /* Corta o fundo que passar do círculo */
+    background-color: #232329; /* Preenchimento escuro neutro para imagens que não forem quadradas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom no container inteiro ao passar o mouse */
+.imagem-container:hover {
+    transform: scale(1.1);
+}
+
+/* Imagem adaptável: mostra o personagem inteiro sem cortar nenhuma borda */
+.estudante-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garante visibilidade total da foto sem cortes */
+}
+
+.estudante-nome {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* ================= AURAS DE REIATSU (CORES PRESERVADAS) ================= */
+
+.reiatsu-byakuya { box-shadow: 0 0 15px 5px rgba(255, 182, 193, 0.8); }
+.reiatsu-aizen { box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.8); }
+.reiatsu-shunsui { box-shadow: 0 0 15px 5px rgba(255, 20, 147, 0.8); }
+.reiatsu-ichibei { box-shadow: 0 0 15px 5px rgba(70, 70, 70, 0.8); }
+.reiatsu-ichigo { box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8); }
+.reiatsu-yhwach { box-shadow: 0 0 15px 5px rgba(0, 0, 139, 0.8); }
+.reiatsu-senjumaru { box-shadow: 0 0 15px 5px rgba(218, 165, 32, 0.8); }
+.reiatsu-unohana { box-shadow: 0 0 15px 5px rgba(0, 128, 128, 0.8); }
+.reiatsu-soifon { box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.8); }
+.reiatsu-yachiru { box-shadow: 0 0 15px 5px rgba(255, 105, 180, 0.8); }
+.reiatsu-yoruichi { box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.8); }
+.reiatsu-rangiku { box-shadow: 0 0 15px 5px rgba(255, 140, 0, 0.8); }
+
 
 .link {
     color: #f6a652; /* Laranja vibrante do cabelo do Ichigo */
