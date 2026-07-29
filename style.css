@@ -284,3 +284,27 @@ padding: 20px;
                     0 15px 35px rgba(0, 0, 255, 0.5);
     }
 }
+
+.titulo-video{
+font family:'segoe UI' tahoma, Genova, Verdana, sans-serif;
+font-size: 40px;
+color:#dfdb0f;
+font-weight: bold;
+text-align: center;
+margin-bottom: 15px;
+}
+
+.container-video {
+background-color: #003B1C;
+padding: 25px;
+text-align: center;
+border-radius: 12px;
+}
+
+.container-video iframe {
+display: block;
+margin: 0 auto;
+max-width: 100%;
+border-radius: 15px;
+
+}
