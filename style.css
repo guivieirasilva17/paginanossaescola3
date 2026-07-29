@@ -285,26 +285,30 @@ padding: 20px;
     }
 }
 
-.titulo-video{
-font family:'segoe UI' tahoma, Genova, Verdana, sans-serif;
-font-size: 40px;
-color:#dfdb0f;
-font-weight: bold;
-text-align: center;
-margin-bottom: 15px;
+.titulo-video {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Corrigido: adicionado o hífen */
+  font-size: 40px;
+  color: #dfdb0f;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .container-video {
-background-color: #003B1C;
-padding: 25px;
-text-align: center;
-border-radius: 12px;
+  background-color: #003B1C;
+  padding: 25px;
+  text-align: center;
+  display: flex; /* Alinha o conteúdo verticalmente */
+  flex-direction: column; 
+  align-items: center; /* Garante a centralização horizontal de tudo dentro dele */
+  border-radius: 12px;
 }
 
 .container-video iframe {
-display: block;
-margin: 0 auto;
-max-width: 100%;
-border-radius: 15px;
-
+  display: block;
+  max-width: 100%;
+  width: 560px; /* Defina uma largura padrão ou 100% para o iframe funcionar bem */
+  height: 315px; /* Defina uma altura proporcional */
+  border: none; /* Remove bordas padrão do iframe */
+  border-radius: 15px;
 }
