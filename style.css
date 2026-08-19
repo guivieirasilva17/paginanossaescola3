@@ -312,6 +312,11 @@ padding: 20px;
   border: none;
   border-radius: 15px;
 }
+
+/*menu*/
+
+html{
+scroll-behavior: smooth;
 body {
 margin: 0;
 padding: 0;
