@@ -79,7 +79,7 @@ padding: 20px;
     display: block;
 }
 
-./* Correção do ponto que faltava no seletor */
+/* Correção do ponto que faltava no seletor */
 .estudante_titulo {
     padding: 50px 20px;
     text-align: center;
@@ -196,7 +196,8 @@ padding: 20px;
 }
 
 
-./* Estilização principal do Rodapé com fundo Ciano Claro e Aura Azul Escura */
+/* Estilização principal do Rodapé com fundo Ciano Claro e Aura Azul Escura */
+
 .bleach {
     background: #00ffff; /* Fundo Azul Claro Ciano sólido e vibrante */
     padding: 60px 20px 30px 20px;
